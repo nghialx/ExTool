@@ -17,3 +17,5 @@ C:\Users\Ngoc Bich\source\repos\ExTool\ExTool\bin\Debug\ExTool.exe.manifest
 C:\Users\Ngoc Bich\source\repos\ExTool\ExTool\bin\Debug\ExTool.application
 C:\Users\Ngoc Bich\source\repos\ExTool\ExTool\obj\Debug\ExTool.exe.manifest
 C:\Users\Ngoc Bich\source\repos\ExTool\ExTool\obj\Debug\ExTool.application
+C:\Users\Ngoc Bich\source\repos\ExTool\ExTool\obj\Debug\ExTool.frm_checklang.resources
+C:\Users\Ngoc Bich\source\repos\ExTool\ExTool\obj\Debug\ExTool.frm_statistic.resources

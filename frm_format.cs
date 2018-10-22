@@ -84,7 +84,7 @@ namespace ExTool
             {
                 try
                 {
-                    f = (float)(i * 100 / 19);
+                    f = (float)(i * 100 / wb.Worksheets.Count);
                     progressbar1.Value = (int)f;
                     atws = wb.Worksheets[i];
                     if (atws.Visible == Excel.XlSheetVisibility.xlSheetHidden)
@@ -165,6 +165,11 @@ namespace ExTool
             sttLabel1.Text = "Done";
             sttLabel1.Visible = true;
             MessageBox.Show("Done", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void frm_format_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace ExTool
 {
-    public partial class frm_main : Form
+    public partial class frm_statistic : Form
     {
-        public frm_main()
+        public frm_statistic()
         {
             InitializeComponent();
         }
 
-        private void frm_main_FormClosing(object sender, FormClosingEventArgs e)
+        private void frm_statistic_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frm_statistic_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }

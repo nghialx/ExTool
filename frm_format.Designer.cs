@@ -267,6 +267,7 @@
             this.Name = "frm_format";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Edit format of excel file";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_format_FormClosing);
             this.Load += new System.EventHandler(this.frm_format_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
