@@ -11,6 +11,10 @@ using System.Drawing.Text;
 using Excel = Microsoft.Office.Interop.Excel;
 using System.Threading;
 using System.Diagnostics;
+using System.Linq.Expressions;
+
+using System.Text.RegularExpressions;
+
 
 namespace ExTool
 {
@@ -52,8 +56,8 @@ namespace ExTool
 
             for (int i = 1; i <= wb.Worksheets.Count; i++)
             {
-                try
-                {
+                //try
+                //{
                     f = (float)(i * 100 / wb.Worksheets.Count);
                     progress1.Value = (int)f;
                     atws = wb.Worksheets[i];
@@ -64,100 +68,40 @@ namespace ExTool
 
 
 
-                    Excel.Range currentFind = null;
-                    Excel.Range firstFind = null;
+                //Excel.Range currentFind = null;
+                //Excel.Range firstFind = null;
 
 
-                    //currentFind = range.Find("v", "",
-                    //Excel.XlFindLookIn.xlValues, Excel.XlLookAt.xlPart,
-                    //Excel.XlSearchOrder.xlByRows, Excel.XlSearchDirection.xlNext, false,
-                    //"", "");
+                ////currentFind = range.Find("v", "",
+                ////Excel.XlFindLookIn.xlValues, Excel.XlLookAt.xlPart,
+                ////Excel.XlSearchOrder.xlByRows, Excel.XlSearchDirection.xlNext, false,
+                ////"", "");
 
-                    currentFind = range.Find("v", LookAt:Excel.XlLookAt.xlPart);
+                //currentFind = range.Find("v", LookAt:Excel.XlLookAt.xlPart);
 
-                    while (currentFind != null)
-                    {
-                        // Keep track of the first range you find. 
-                        if (firstFind == null)
-                        {
-                            firstFind = currentFind;
-                        }
+                //while (currentFind != null)
+                //{
+                //    // Keep track of the first range you find. 
+                //    if (firstFind == null)
+                //    {
+                //        firstFind = currentFind;
+                //    }
 
-                        // If you didn't move to a new range, you are done.
-                        else if (currentFind.get_Address(Excel.XlReferenceStyle.xlA1)
-                              == firstFind.get_Address(Excel.XlReferenceStyle.xlA1))
-                        {
-                            break;
-                        }
+                //    // If you didn't move to a new range, you are done.
+                //    else if (currentFind.get_Address(Excel.XlReferenceStyle.xlA1)
+                //          == firstFind.get_Address(Excel.XlReferenceStyle.xlA1))
+                //    {
+                //        break;
+                //    }
 
-                        currentFind.Font.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Red);
-                        currentFind.Font.Bold = true;
+                //    currentFind.Font.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Red);
+                //    currentFind.Font.Bold = true;
 
-                        gv_text.Rows.Add(no, atws.Name, currentFind.Row, currentFind.Column, currentFind.Text, "");
-                        no++;
+                //    gv_text.Rows.Add(no, atws.Name, currentFind.Row, currentFind.Column, currentFind.Text, "");
+                //    no++;
 
-                        currentFind = range.FindNext(currentFind);
-                    }
-
-
-
-
-
-
-
-
-
-
-                    ////for (int j = 1; j <= range.Rows.Count; j++)
-                    ////{
-                    ////    for (int k = 1; k <= range.Columns.Count; k++)
-                    ////    {
-                    ////        Excel.Range range2 = range.Cells[j, k];
-                    ////        string tmp;
-                    ////        string tmp_en = "";
-                    ////        string value = (string)(range.Cells[j, k] as Excel.Range).Value;
-                    ////        string nonjptext = "";
-                    ////        if (value == null)
-                    ////        {
-                    ////            continue;
-                    ////        }
-                    ////        foreach (char c in value)
-                    ////        {
-                    ////            tmp = c.ToString();
-                    ////            //Check number
-                    ////            if (cb_number.Checked)
-                    ////            {
-                    ////                double myNum = 0;
-                    ////                if (Double.TryParse(tmp, out myNum))
-                    ////                {
-                    ////                    continue;
-                    ////                }
-                    ////            }
-
-                    ////            //Check special charater
-                    ////            if (cb_special.Checked)
-                    ////            {
-                    ////                if (txt_special.Text.Contains(tmp))
-                    ////                {
-                    ////                    continue;
-                    ////                }
-                    ////            }
-
-                    ////            //tmp_en = RemoveSign4VietnameseString(tmp);
-                    ////            if (!ContainsUnicodeCharacter(tmp))
-                    ////            {
-                    ////                nonjptext += tmp;
-                    ////            }
-                    ////        }
-                    ////        nonjptext.Trim();
-                    ////        if (nonjptext != "" && nonjptext != " ")
-                    ////        {
-                    ////            string col = ColumnIndexToColumnLetter(k);
-                    ////            gv_text.Rows.Add(no, atws.Name, j, col, value, nonjptext);
-                    ////            no++;
-                    ////        }
-                    ////    }
-                    ////}
+                //    currentFind = range.FindNext(currentFind);
+                //}
 
 
 
@@ -167,10 +111,100 @@ namespace ExTool
 
 
 
-                }
-                catch (Exception)
+
+                //for (int j = 1; j <= range.Rows.Count; j++)
+                //{
+                //    for (int k = 1; k <= range.Columns.Count; k++)
+                //    {
+                //        Excel.Range range2 = range.Cells[j, k];
+                //        string tmp;
+                //        string tmp_en = "";
+                //        string value = (string)(range.Cells[j, k] as Excel.Range).Value;
+                //        string nonjptext = "";
+                //        if (value == null)
+                //        {
+                //            continue;
+                //        }
+                //        foreach (char c in value)
+                //        {
+                //            tmp = c.ToString();
+                //            //Check number
+                //            if (cb_number.Checked)
+                //            {
+                //                double myNum = 0;
+                //                if (Double.TryParse(tmp, out myNum))
+                //                {
+                //                    continue;
+                //                }
+                //            }
+
+                //            //Check special charater
+                //            if (cb_special.Checked)
+                //            {
+                //                if (txt_special.Text.Contains(tmp))
+                //                {
+                //                    continue;
+                //                }
+                //            }
+
+                //            //tmp_en = RemoveSign4VietnameseString(tmp);
+                //            if (!ContainsUnicodeCharacter(tmp))
+                //            {
+                //                nonjptext += tmp;
+                //            }
+                //        }
+                //        nonjptext.Trim();
+                //        if (nonjptext != "" && nonjptext != " ")
+                //        {
+                //            string col = ColumnIndexToColumnLetter(k);
+                //            gv_text.Rows.Add(no, atws.Name, j, col, value, nonjptext);
+                //            no++;
+                //        }
+                //    }
+                //}
+
+
+
+
+                for (int j = 1; j <= range.Rows.Count; j++)
                 {
+                    for (int k = 1; k <= range.Columns.Count; k++)
+                    {
+                        Excel.Range range2 = range.Cells[j, k];
+
+                        string value = (string)(range.Cells[j, k] as Excel.Range).Value;
+
+                        string nonjptext = "";
+                        string rg = "";
+                        if (value == null)
+                        {
+                            continue;
+                        }
+
+                        rg += @"[";
+                        rg += @"\p{Lo}"; //Remove japanese
+                        rg += @"\p{N}"; //any kind of numeric character in any script.
+                                        //rg += @"\p{S}"; //Remove math symbols, currency signs, dingbats, box-drawing characters, etc.
+                                        //rg += @"【】『』「」＜＞＝―←→：。・ー　、（）※";
+                                        // rg += @".,:;_()<=>";
+                        rg += @"]";
+                        nonjptext = Regex.Replace(value, rg, string.Empty);
+                        nonjptext.Trim();
+                        if (nonjptext != "" && nonjptext != " ")
+                        {
+                            string col = ColumnIndexToColumnLetter(k);
+                            gv_text.Rows.Add(no, atws.Name, j, col, value, nonjptext);
+                            no++;
+                        }
+                    }
                 }
+
+
+
+                //}
+                //catch (Exception)
+                //{
+                //}
 
             }
             
@@ -182,6 +216,25 @@ namespace ExTool
             MessageBox.Show("Done", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public bool ContainsUnicodeCharacter(string input)
         {

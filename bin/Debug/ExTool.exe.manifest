@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ExTool.exe" size="194552">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ExTool.exe" size="193528">
       <assemblyIdentity name="ExTool" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>E52gxoWjwV4GW/sv2XZ0udjIkLQdWRRV47xiVEbxuC4=</dsig:DigestValue>
+        <dsig:DigestValue>ISyn0Ujiblw8eSk2LuikpsXhMbGWwf2qxzNX01uCWvw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
