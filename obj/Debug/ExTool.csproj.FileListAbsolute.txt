@@ -19,3 +19,24 @@ C:\Users\Ngoc Bich\source\repos\ExTool\ExTool\obj\Debug\ExTool.exe.manifest
 C:\Users\Ngoc Bich\source\repos\ExTool\ExTool\obj\Debug\ExTool.application
 C:\Users\Ngoc Bich\source\repos\ExTool\ExTool\obj\Debug\ExTool.frm_checklang.resources
 C:\Users\Ngoc Bich\source\repos\ExTool\ExTool\obj\Debug\ExTool.frm_statistic.resources
+D:\Git\ExTool\bin\Debug\ExTool.exe.config
+D:\Git\ExTool\bin\Debug\ExTool.exe.manifest
+D:\Git\ExTool\bin\Debug\ExTool.application
+D:\Git\ExTool\bin\Debug\ExTool.exe
+D:\Git\ExTool\bin\Debug\ExTool.pdb
+D:\Git\ExTool\obj\Debug\ExTool.csprojAssemblyReference.cache
+D:\Git\ExTool\obj\Debug\Interop.LCC11.dll
+D:\Git\ExTool\obj\Debug\ExTool.csproj.ResolveComReference.cache
+D:\Git\ExTool\obj\Debug\ExTool.frm_checklang.resources
+D:\Git\ExTool\obj\Debug\ExTool.frm_format.resources
+D:\Git\ExTool\obj\Debug\ExTool.frm_main.resources
+D:\Git\ExTool\obj\Debug\ExTool.frm_statistic.resources
+D:\Git\ExTool\obj\Debug\ExTool.Properties.Resources.resources
+D:\Git\ExTool\obj\Debug\ExTool.uc_file.resources
+D:\Git\ExTool\obj\Debug\ExTool.uc_menu.resources
+D:\Git\ExTool\obj\Debug\ExTool.csproj.GenerateResource.cache
+D:\Git\ExTool\obj\Debug\ExTool.csproj.CoreCompileInputs.cache
+D:\Git\ExTool\obj\Debug\ExTool.exe.manifest
+D:\Git\ExTool\obj\Debug\ExTool.application
+D:\Git\ExTool\obj\Debug\ExTool.exe
+D:\Git\ExTool\obj\Debug\ExTool.pdb
