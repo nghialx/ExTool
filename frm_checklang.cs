@@ -20,6 +20,7 @@ namespace ExTool
 {
     public partial class frm_checklang : Form
     {
+        //public string lang_char = "abcdefghijklmnopqrstuvwxyzáàạảãâấầậẩẫăắằặẳẵéèẹẻẽêếềệểễóòọỏõôốồộổỗơớờợởỡúùụủũưứừựửữíìịỉĩđýỳỵỷỹ";
         public frm_checklang()
         {
             InitializeComponent();
@@ -49,7 +50,7 @@ namespace ExTool
 
             stt_label.Visible = true;
             Excel.Application ex = new Excel.Application();
-            Excel.Workbook wb = ex.Workbooks.Open(ctrl.Text, ReadOnly: true);
+            Excel.Workbook wb = ex.Workbooks.Open(ctrl.Text);
             Excel.Worksheet atws = wb.ActiveSheet;
             stt_label.Visible = false;
             progress1.Visible = true;
@@ -64,6 +65,7 @@ namespace ExTool
                     atws.Activate();
 
                     Excel.Range range = atws.Range[atws.PageSetup.PrintArea];
+                    
 
 
 
@@ -72,6 +74,7 @@ namespace ExTool
                 //Excel.Range firstFind = null;
 
 
+<<<<<<< HEAD
                 ////currentFind = range.Find("v", "",
                 ////Excel.XlFindLookIn.xlValues, Excel.XlLookAt.xlPart,
                 ////Excel.XlSearchOrder.xlByRows, Excel.XlSearchDirection.xlNext, false,
@@ -102,6 +105,40 @@ namespace ExTool
 
                 //    currentFind = range.FindNext(currentFind);
                 //}
+=======
+                    //currentFind = range.Find("v", "",
+                    //Excel.XlFindLookIn.xlValues, Excel.XlLookAt.xlPart,
+                    //Excel.XlSearchOrder.xlByRows, Excel.XlSearchDirection.xlNext, false,
+                    //"", "");
+                    foreach (char c in lang_char)
+                    {
+                        currentFind = range.Find(c.ToString(), LookAt: Excel.XlLookAt.xlPart);
+
+                        while (currentFind != null)
+                        {
+                            // Keep track of the first range you find. 
+                            if (firstFind == null)
+                            {
+                                firstFind = currentFind;
+                            }
+
+                            // If you didn't move to a new range, you are done.
+                            else if (currentFind.get_Address(Excel.XlReferenceStyle.xlA1)
+                                  == firstFind.get_Address(Excel.XlReferenceStyle.xlA1))
+                            {
+                                break;
+                            }
+
+                            currentFind.Font.Color = System.Drawing.ColorTranslator.ToOle(System.Drawing.Color.Red);
+                            currentFind.Font.Bold = true;
+
+                            gv_text.Rows.Add(no, atws.Name, currentFind.Row, currentFind.Column, currentFind.Text, c.ToString());
+                            no++;
+
+                            currentFind = range.FindNext(currentFind);
+                        }
+                    }
+>>>>>>> d5d034bfcfcf9f2bab20c659a23a922f99baba6f
 
 
 
@@ -207,10 +244,10 @@ namespace ExTool
                 //}
 
             }
-            
+
 
             stt_label.Text = "Done";
-            wb.Close(SaveChanges: false);
+            wb.Close(SaveChanges: true);
             progress1.Visible = false;
             stt_label.Visible = true;
             MessageBox.Show("Done", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
