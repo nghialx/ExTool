@@ -19,14 +19,6 @@ namespace ExTool
 
         private void formatPageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //if (this.ParentForm.Name!="frm_main")
-            //{
-            //    this.ParentForm.Close();
-            //}
-            //else
-            //{
-            //    this.ParentForm.Hide();
-            //}
             this.ParentForm.Hide();
             frm_format frm = new frm_format();
             frm.Show();
@@ -39,15 +31,9 @@ namespace ExTool
 
         private void countToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.ParentForm.Name != "frm_main")
-            {
-                this.ParentForm.Close();
-            }
-            else
-            {
-                this.ParentForm.Hide();
-            }
-            frm_format frm = new frm_format();
+            
+            this.ParentForm.Hide();
+            frm_statistic frm = new frm_statistic();
             frm.Show();
         }
 
@@ -63,14 +49,6 @@ namespace ExTool
 
         private void checkFileToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //if (this.ParentForm.Name != "frm_main")
-            //{
-            //    this.ParentForm.Close();
-            //}
-            //else
-            //{
-            //    this.ParentForm.Hide();
-            //}
             this.ParentForm.Hide();
             frm_checklang frm = new frm_checklang();
             frm.Show();

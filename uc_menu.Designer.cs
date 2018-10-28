@@ -49,7 +49,7 @@
             this.helpToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(136, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(256, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -92,7 +92,7 @@
             // 
             this.formatPageToolStripMenuItem.Name = "formatPageToolStripMenuItem";
             this.formatPageToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.formatPageToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.formatPageToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.formatPageToolStripMenuItem.Text = "Format page";
             this.formatPageToolStripMenuItem.Click += new System.EventHandler(this.formatPageToolStripMenuItem_Click);
             // 
@@ -101,15 +101,15 @@
             this.countToolStripMenuItem.Name = "countToolStripMenuItem";
             this.countToolStripMenuItem.ShortcutKeyDisplayString = "";
             this.countToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.S)));
-            this.countToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.countToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.countToolStripMenuItem.Text = "Statistic";
             this.countToolStripMenuItem.Click += new System.EventHandler(this.countToolStripMenuItem_Click);
             // 
             // checkFileToolStripMenuItem
             // 
             this.checkFileToolStripMenuItem.Name = "checkFileToolStripMenuItem";
-            this.checkFileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.checkFileToolStripMenuItem.Size = new System.Drawing.Size(232, 22);
+            this.checkFileToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.H)));
+            this.checkFileToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.checkFileToolStripMenuItem.Text = "Check EN/VI on JP file";
             this.checkFileToolStripMenuItem.Click += new System.EventHandler(this.checkFileToolStripMenuItem_Click);
             // 

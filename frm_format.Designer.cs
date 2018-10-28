@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_format));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbLink = new System.Windows.Forms.CheckBox();
             this.cm_font = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.nm_percent = new System.Windows.Forms.NumericUpDown();
@@ -55,6 +56,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbLink);
             this.groupBox1.Controls.Add(this.cm_font);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.nm_percent);
@@ -72,12 +74,24 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             // 
+            // cbLink
+            // 
+            this.cbLink.AutoSize = true;
+            this.cbLink.Checked = true;
+            this.cbLink.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbLink.Location = new System.Drawing.Point(609, 62);
+            this.cbLink.Name = "cbLink";
+            this.cbLink.Size = new System.Drawing.Size(85, 17);
+            this.cbLink.TabIndex = 8;
+            this.cbLink.Text = "Remove link";
+            this.cbLink.UseVisualStyleBackColor = true;
+            // 
             // cm_font
             // 
             this.cm_font.FormattingEnabled = true;
             this.cm_font.Location = new System.Drawing.Point(263, 60);
             this.cm_font.Name = "cm_font";
-            this.cm_font.Size = new System.Drawing.Size(156, 21);
+            this.cm_font.Size = new System.Drawing.Size(127, 21);
             this.cm_font.TabIndex = 7;
             // 
             // label1
@@ -103,9 +117,9 @@
             // 
             // nr_size
             // 
-            this.nr_size.Location = new System.Drawing.Point(425, 60);
+            this.nr_size.Location = new System.Drawing.Point(396, 60);
             this.nr_size.Name = "nr_size";
-            this.nr_size.Size = new System.Drawing.Size(72, 20);
+            this.nr_size.Size = new System.Drawing.Size(44, 20);
             this.nr_size.TabIndex = 5;
             this.nr_size.Value = new decimal(new int[] {
             9,
@@ -155,7 +169,7 @@
             this.cb_coverpage.Checked = true;
             this.cb_coverpage.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cb_coverpage.Enabled = false;
-            this.cb_coverpage.Location = new System.Drawing.Point(503, 62);
+            this.cb_coverpage.Location = new System.Drawing.Point(446, 62);
             this.cb_coverpage.Name = "cb_coverpage";
             this.cb_coverpage.Size = new System.Drawing.Size(113, 17);
             this.cb_coverpage.TabIndex = 0;
@@ -299,5 +313,6 @@
         private System.Windows.Forms.CheckBox cb_coverpage;
         private System.Windows.Forms.ToolStripStatusLabel sttLabel1;
         private uc_file uc_file1;
+        private System.Windows.Forms.CheckBox cbLink;
     }
 }

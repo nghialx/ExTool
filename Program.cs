@@ -16,7 +16,7 @@ namespace ExTool
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frm_checklang());
+            Application.Run(new frm_format());
         }
     }
 }

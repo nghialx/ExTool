@@ -36,9 +36,10 @@
             this.Cell = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Content = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NonJPText = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.stt_label = new System.Windows.Forms.ToolStripStatusLabel();
-            this.progress1 = new System.Windows.Forms.ToolStripProgressBar();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tResult = new System.Windows.Forms.TabPage();
+            this.tConfig = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.txt_special = new System.Windows.Forms.TextBox();
             this.cb_special = new System.Windows.Forms.CheckBox();
@@ -46,14 +47,16 @@
             this.uc_menu1 = new ExTool.uc_menu();
             this.uc_file1 = new ExTool.uc_file();
             ((System.ComponentModel.ISupportInitialize)(this.gv_text)).BeginInit();
-            this.statusStrip1.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tResult.SuspendLayout();
+            this.tConfig.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // bt_check
             // 
             this.bt_check.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_check.Location = new System.Drawing.Point(713, 45);
+            this.bt_check.Location = new System.Drawing.Point(713, 38);
             this.bt_check.Name = "bt_check";
             this.bt_check.Size = new System.Drawing.Size(46, 23);
             this.bt_check.TabIndex = 1;
@@ -73,82 +76,92 @@
             this.Cell,
             this.Content,
             this.NonJPText});
-            this.gv_text.Location = new System.Drawing.Point(37, 182);
+            this.gv_text.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.gv_text.Location = new System.Drawing.Point(0, 0);
             this.gv_text.Name = "gv_text";
-            this.gv_text.ReadOnly = true;
-            this.gv_text.Size = new System.Drawing.Size(722, 438);
+            this.gv_text.Size = new System.Drawing.Size(714, 432);
             this.gv_text.TabIndex = 3;
             // 
             // No
             // 
             this.No.HeaderText = "No";
             this.No.Name = "No";
-            this.No.ReadOnly = true;
             this.No.Width = 40;
             // 
             // Sheet
             // 
             this.Sheet.HeaderText = "Sheet";
             this.Sheet.Name = "Sheet";
-            this.Sheet.ReadOnly = true;
             this.Sheet.Width = 120;
             // 
             // Cell
             // 
             this.Cell.HeaderText = "Cell";
             this.Cell.Name = "Cell";
-            this.Cell.ReadOnly = true;
             this.Cell.Width = 50;
             // 
             // Content
             // 
             this.Content.HeaderText = "Content";
             this.Content.Name = "Content";
-            this.Content.ReadOnly = true;
             this.Content.Width = 300;
             // 
             // NonJPText
             // 
             this.NonJPText.HeaderText = "Non JP Text";
             this.NonJPText.Name = "NonJPText";
-            this.NonJPText.ReadOnly = true;
             this.NonJPText.Width = 150;
             // 
-            // statusStrip1
+            // progressBar1
             // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.stt_label,
-            this.progress1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 638);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(800, 22);
-            this.statusStrip1.TabIndex = 4;
-            this.statusStrip1.Text = "statusStrip1";
+            this.progressBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.progressBar1.Location = new System.Drawing.Point(0, 556);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(800, 5);
+            this.progressBar1.TabIndex = 6;
+            this.progressBar1.Visible = false;
             // 
-            // stt_label
+            // tabControl1
             // 
-            this.stt_label.Name = "stt_label";
-            this.stt_label.Size = new System.Drawing.Size(78, 17);
-            this.stt_label.Text = "Loading file...";
-            this.stt_label.Visible = false;
+            this.tabControl1.Controls.Add(this.tResult);
+            this.tabControl1.Controls.Add(this.tConfig);
+            this.tabControl1.Location = new System.Drawing.Point(37, 82);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(722, 459);
+            this.tabControl1.TabIndex = 7;
             // 
-            // progress1
+            // tResult
             // 
-            this.progress1.Name = "progress1";
-            this.progress1.Size = new System.Drawing.Size(200, 16);
-            this.progress1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progress1.Visible = false;
+            this.tResult.Controls.Add(this.gv_text);
+            this.tResult.Location = new System.Drawing.Point(4, 22);
+            this.tResult.Name = "tResult";
+            this.tResult.Padding = new System.Windows.Forms.Padding(3);
+            this.tResult.Size = new System.Drawing.Size(714, 433);
+            this.tResult.TabIndex = 0;
+            this.tResult.Text = "Result";
+            this.tResult.UseVisualStyleBackColor = true;
+            // 
+            // tConfig
+            // 
+            this.tConfig.Controls.Add(this.groupBox1);
+            this.tConfig.Location = new System.Drawing.Point(4, 22);
+            this.tConfig.Name = "tConfig";
+            this.tConfig.Padding = new System.Windows.Forms.Padding(3);
+            this.tConfig.Size = new System.Drawing.Size(714, 433);
+            this.tConfig.TabIndex = 1;
+            this.tConfig.Text = "Config";
+            this.tConfig.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txt_special);
             this.groupBox1.Controls.Add(this.cb_special);
             this.groupBox1.Controls.Add(this.cb_number);
-            this.groupBox1.Location = new System.Drawing.Point(37, 85);
+            this.groupBox1.Location = new System.Drawing.Point(6, 21);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(722, 70);
-            this.groupBox1.TabIndex = 5;
+            this.groupBox1.Size = new System.Drawing.Size(702, 70);
+            this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ignore list";
             // 
@@ -156,7 +169,7 @@
             // 
             this.txt_special.Location = new System.Drawing.Point(221, 27);
             this.txt_special.Name = "txt_special";
-            this.txt_special.Size = new System.Drawing.Size(479, 20);
+            this.txt_special.Size = new System.Drawing.Size(468, 20);
             this.txt_special.TabIndex = 1;
             this.txt_special.Text = "【】『』「」＜＞＝―←→：。・ー　、（）※.,:;_()<=>";
             // 
@@ -194,7 +207,7 @@
             // 
             // uc_file1
             // 
-            this.uc_file1.Location = new System.Drawing.Point(10, 34);
+            this.uc_file1.Location = new System.Drawing.Point(10, 27);
             this.uc_file1.Margin = new System.Windows.Forms.Padding(4);
             this.uc_file1.Name = "uc_file1";
             this.uc_file1.Size = new System.Drawing.Size(777, 48);
@@ -204,29 +217,28 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 660);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.statusStrip1);
-            this.Controls.Add(this.gv_text);
+            this.ClientSize = new System.Drawing.Size(800, 561);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.uc_menu1);
             this.Controls.Add(this.bt_check);
             this.Controls.Add(this.uc_file1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(816, 699);
-            this.MinimumSize = new System.Drawing.Size(816, 699);
+            this.MaximumSize = new System.Drawing.Size(816, 600);
+            this.MinimumSize = new System.Drawing.Size(816, 600);
             this.Name = "frm_checklang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Check EN/VI on JP file";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frm_checklang_FormClosing);
             this.Load += new System.EventHandler(this.frm_checklang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gv_text)).EndInit();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            this.tabControl1.ResumeLayout(false);
+            this.tResult.ResumeLayout(false);
+            this.tConfig.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -236,17 +248,18 @@
         private System.Windows.Forms.Button bt_check;
         private uc_menu uc_menu1;
         private System.Windows.Forms.DataGridView gv_text;
-        private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel stt_label;
-        private System.Windows.Forms.ToolStripProgressBar progress1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox cb_number;
-        private System.Windows.Forms.CheckBox cb_special;
-        private System.Windows.Forms.TextBox txt_special;
         private System.Windows.Forms.DataGridViewTextBoxColumn No;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sheet;
         private System.Windows.Forms.DataGridViewTextBoxColumn Cell;
         private System.Windows.Forms.DataGridViewTextBoxColumn Content;
         private System.Windows.Forms.DataGridViewTextBoxColumn NonJPText;
+        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tResult;
+        private System.Windows.Forms.TabPage tConfig;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txt_special;
+        private System.Windows.Forms.CheckBox cb_special;
+        private System.Windows.Forms.CheckBox cb_number;
     }
 }
