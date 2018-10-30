@@ -114,7 +114,7 @@ namespace ExTool
                 objDA.Fill(excelDataSet);
                 DataTable tbdata = excelDataSet.Tables[0];
 
-                int erow = 2;
+                int erow = 1;
                 foreach (DataRow dtr in tbdata.Rows)
                 {
                     erow++;
