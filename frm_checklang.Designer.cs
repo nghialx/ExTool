@@ -56,9 +56,10 @@
             // bt_check
             // 
             this.bt_check.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bt_check.Location = new System.Drawing.Point(713, 38);
+            this.bt_check.Location = new System.Drawing.Point(951, 47);
+            this.bt_check.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.bt_check.Name = "bt_check";
-            this.bt_check.Size = new System.Drawing.Size(46, 23);
+            this.bt_check.Size = new System.Drawing.Size(61, 28);
             this.bt_check.TabIndex = 1;
             this.bt_check.Text = "Check";
             this.bt_check.UseVisualStyleBackColor = true;
@@ -78,8 +79,9 @@
             this.NonJPText});
             this.gv_text.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
             this.gv_text.Location = new System.Drawing.Point(0, 0);
+            this.gv_text.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gv_text.Name = "gv_text";
-            this.gv_text.Size = new System.Drawing.Size(714, 432);
+            this.gv_text.Size = new System.Drawing.Size(952, 532);
             this.gv_text.TabIndex = 3;
             // 
             // No
@@ -115,9 +117,10 @@
             // progressBar1
             // 
             this.progressBar1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.progressBar1.Location = new System.Drawing.Point(0, 556);
+            this.progressBar1.Location = new System.Drawing.Point(0, 675);
+            this.progressBar1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(800, 5);
+            this.progressBar1.Size = new System.Drawing.Size(1064, 6);
             this.progressBar1.TabIndex = 6;
             this.progressBar1.Visible = false;
             // 
@@ -125,19 +128,21 @@
             // 
             this.tabControl1.Controls.Add(this.tResult);
             this.tabControl1.Controls.Add(this.tConfig);
-            this.tabControl1.Location = new System.Drawing.Point(37, 82);
+            this.tabControl1.Location = new System.Drawing.Point(49, 101);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(722, 459);
+            this.tabControl1.Size = new System.Drawing.Size(963, 565);
             this.tabControl1.TabIndex = 7;
             // 
             // tResult
             // 
             this.tResult.Controls.Add(this.gv_text);
-            this.tResult.Location = new System.Drawing.Point(4, 22);
+            this.tResult.Location = new System.Drawing.Point(4, 25);
+            this.tResult.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tResult.Name = "tResult";
-            this.tResult.Padding = new System.Windows.Forms.Padding(3);
-            this.tResult.Size = new System.Drawing.Size(714, 433);
+            this.tResult.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tResult.Size = new System.Drawing.Size(955, 536);
             this.tResult.TabIndex = 0;
             this.tResult.Text = "Result";
             this.tResult.UseVisualStyleBackColor = true;
@@ -145,10 +150,11 @@
             // tConfig
             // 
             this.tConfig.Controls.Add(this.groupBox1);
-            this.tConfig.Location = new System.Drawing.Point(4, 22);
+            this.tConfig.Location = new System.Drawing.Point(4, 25);
+            this.tConfig.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tConfig.Name = "tConfig";
-            this.tConfig.Padding = new System.Windows.Forms.Padding(3);
-            this.tConfig.Size = new System.Drawing.Size(714, 433);
+            this.tConfig.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tConfig.Size = new System.Drawing.Size(955, 536);
             this.tConfig.TabIndex = 1;
             this.tConfig.Text = "Config";
             this.tConfig.UseVisualStyleBackColor = true;
@@ -158,18 +164,21 @@
             this.groupBox1.Controls.Add(this.txt_special);
             this.groupBox1.Controls.Add(this.cb_special);
             this.groupBox1.Controls.Add(this.cb_number);
-            this.groupBox1.Location = new System.Drawing.Point(6, 21);
+            this.groupBox1.Location = new System.Drawing.Point(8, 26);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(702, 70);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(936, 86);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Ignore list";
             // 
             // txt_special
             // 
-            this.txt_special.Location = new System.Drawing.Point(221, 27);
+            this.txt_special.Location = new System.Drawing.Point(295, 33);
+            this.txt_special.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_special.Name = "txt_special";
-            this.txt_special.Size = new System.Drawing.Size(468, 20);
+            this.txt_special.Size = new System.Drawing.Size(623, 22);
             this.txt_special.TabIndex = 1;
             this.txt_special.Text = "【】『』「」＜＞＝―←→：。・ー　、（）※.,:;_()<=>";
             // 
@@ -178,9 +187,10 @@
             this.cb_special.AutoSize = true;
             this.cb_special.Checked = true;
             this.cb_special.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_special.Location = new System.Drawing.Point(105, 27);
+            this.cb_special.Location = new System.Drawing.Point(140, 33);
+            this.cb_special.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cb_special.Name = "cb_special";
-            this.cb_special.Size = new System.Drawing.Size(109, 17);
+            this.cb_special.Size = new System.Drawing.Size(140, 21);
             this.cb_special.TabIndex = 0;
             this.cb_special.Text = "Special character";
             this.cb_special.UseVisualStyleBackColor = true;
@@ -190,9 +200,10 @@
             this.cb_number.AutoSize = true;
             this.cb_number.Checked = true;
             this.cb_number.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cb_number.Location = new System.Drawing.Point(13, 27);
+            this.cb_number.Location = new System.Drawing.Point(17, 33);
+            this.cb_number.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cb_number.Name = "cb_number";
-            this.cb_number.Size = new System.Drawing.Size(63, 17);
+            this.cb_number.Size = new System.Drawing.Size(80, 21);
             this.cb_number.TabIndex = 0;
             this.cb_number.Text = "Number";
             this.cb_number.UseVisualStyleBackColor = true;
@@ -200,33 +211,34 @@
             // uc_menu1
             // 
             this.uc_menu1.Location = new System.Drawing.Point(1, 1);
-            this.uc_menu1.Margin = new System.Windows.Forms.Padding(4);
+            this.uc_menu1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.uc_menu1.Name = "uc_menu1";
-            this.uc_menu1.Size = new System.Drawing.Size(582, 35);
+            this.uc_menu1.Size = new System.Drawing.Size(776, 43);
             this.uc_menu1.TabIndex = 2;
             // 
             // uc_file1
             // 
-            this.uc_file1.Location = new System.Drawing.Point(10, 27);
-            this.uc_file1.Margin = new System.Windows.Forms.Padding(4);
+            this.uc_file1.Location = new System.Drawing.Point(13, 33);
+            this.uc_file1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.uc_file1.Name = "uc_file1";
-            this.uc_file1.Size = new System.Drawing.Size(777, 48);
+            this.uc_file1.Size = new System.Drawing.Size(1036, 59);
             this.uc_file1.TabIndex = 0;
             // 
             // frm_checklang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 561);
+            this.ClientSize = new System.Drawing.Size(1064, 681);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.uc_menu1);
             this.Controls.Add(this.bt_check);
             this.Controls.Add(this.uc_file1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(816, 600);
-            this.MinimumSize = new System.Drawing.Size(816, 600);
+            this.MaximumSize = new System.Drawing.Size(1082, 728);
+            this.MinimumSize = new System.Drawing.Size(1082, 728);
             this.Name = "frm_checklang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Check EN/VI on JP file";

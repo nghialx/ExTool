@@ -37,32 +37,35 @@
             // uc_menu1
             // 
             this.uc_menu1.Location = new System.Drawing.Point(0, 0);
+            this.uc_menu1.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
             this.uc_menu1.Name = "uc_menu1";
-            this.uc_menu1.Size = new System.Drawing.Size(800, 23);
+            this.uc_menu1.Size = new System.Drawing.Size(1067, 28);
             this.uc_menu1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(-3, 437);
+            this.label1.Location = new System.Drawing.Point(-4, 538);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(202, 13);
+            this.label1.Size = new System.Drawing.Size(271, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Copyright - Chris (NghiaLX@fsoft.com.vn)";
             // 
             // frm_main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::ExTool.Properties.Resources.innovation1;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1064, 544);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.uc_menu1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(816, 489);
-            this.MinimumSize = new System.Drawing.Size(816, 489);
+            this.MaximumSize = new System.Drawing.Size(1082, 591);
+            this.MinimumSize = new System.Drawing.Size(1082, 591);
             this.Name = "frm_main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Excel Tools";
